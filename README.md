@@ -52,3 +52,5 @@ hugo new posts/java/my-new-post.md
 ## 站点地址
 
 https://<username>.github.io/blog_infra/
+
+https://czt0630.github.io/blog_infra/

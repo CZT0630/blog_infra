@@ -1,0 +1,111 @@
+/* 自定义样式 - 博客美化 */
+
+/* 侧边栏头像美化 */
+.site-avatar {
+  img {
+    border: 3px solid var(--accent-color, #667eea);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* 文章卡片美化 */
+.article-list--default .article-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* 代码块美化 */
+.highlight {
+  border-radius: 8px;
+  overflow: hidden;
+
+  pre {
+    padding: 1em;
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+}
+
+/* 标签美化 */
+.article-card .article-tags a {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+/* 侧边栏分类/标签云美化 */
+.widget {
+  border-radius: 12px;
+  padding: 1.2em;
+
+  h2 {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+  }
+}
+
+/* 搜索框美化 */
+.search-input {
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 2px solid var(--border-color, #e0e0e0);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: var(--accent-color, #667eea);
+    outline: none;
+  }
+}
+
+/* 目录美化 (TOC) */
+.toc {
+  border-left: 3px solid var(--accent-color, #667eea);
+  padding-left: 1em;
+
+  a {
+    color: var(--text-color-secondary);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-color, #667eea);
+    }
+  }
+}
+
+/* 暗色模式优化 */
+[data-scheme="dark"] {
+  .article-card {
+    background: #1e1e2e;
+  }
+
+  .widget {
+    background: #1e1e2e;
+  }
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .site-avatar img {
+    width: 80px;
+    height: 80px;
+  }
+}

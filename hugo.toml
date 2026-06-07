@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://czt0630.github.io/blog_infra/"
 defaultContentLanguage = "zh"
 title = "WSPN 的学习笔记"
 theme = "hugo-theme-stack"
@@ -11,7 +11,7 @@ paginate = 10
 
   [params.footer]
     since = 2026
-    customText = ""
+    customText = "Powered by Hugo & Stack"
 
   [params.dateFormat]
     published = "2006-01-02"
@@ -19,6 +19,9 @@ paginate = 10
 
   [params.sidebar]
     compact = false
+    subtitle = "终身学习者 | Java · AI/LLM · VR"
+    avatar = "images/avatar.png"
+    emoji = "🚀"
 
   [params.article]
     headingAnchor = true
@@ -28,9 +31,15 @@ paginate = 10
 
     [params.article.list]
       showTags = true
+      showCategories = true
+      showDate = true
+      showAuthor = false
+      showSummary = true
+      summaryLength = 200
 
     [params.article.license]
-      enabled = false
+      enabled = true
+      default = "CC BY-NC-SA 4.0"
 
   [params.widgets]
     homepage = [
@@ -39,11 +48,18 @@ paginate = 10
       {type = "categories"},
       {type = "tag-cloud"}
     ]
-    page = []
+    page = [
+      {type = "toc"}
+    ]
 
   [params.colorScheme]
     toggle = true
     default = "auto"
+
+  [params.opengraph]
+    [params.opengraph.twitter]
+      site = ""
+      card = "summary_large_image"
 
   [params.comments]
     enabled = false
@@ -70,9 +86,24 @@ paginate = 10
     url = "/about/"
     weight = 50
 
+  [[menu.social]]
+    name = "GitHub"
+    url = "https://github.com/CZT0630"
+    weight = 10
+    [menu.social.params]
+      icon = "brand-github"
+
 [markup]
   [markup.highlight]
     codeFences = true
     guessSyntax = true
     lineNos = true
-    style = "monokai"
+    style = "dracula"
+    noClasses = true
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
