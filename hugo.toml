@@ -1,0 +1,78 @@
+baseURL = "https://example.com/"
+defaultContentLanguage = "zh"
+title = "WSPN 的学习笔记"
+theme = "hugo-theme-stack"
+paginate = 10
+
+[params]
+  mainSections = ["posts"]
+  rssFullContent = true
+  description = "记录 Java、AI/LLM、VR 等技术学习过程"
+
+  [params.footer]
+    since = 2026
+    customText = ""
+
+  [params.dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02"
+
+  [params.sidebar]
+    compact = false
+
+  [params.article]
+    headingAnchor = true
+    math = true
+    toc = true
+    readingTime = true
+
+    [params.article.list]
+      showTags = true
+
+    [params.article.license]
+      enabled = false
+
+  [params.widgets]
+    homepage = [
+      {type = "search"},
+      {type = "archives"},
+      {type = "categories"},
+      {type = "tag-cloud"}
+    ]
+    page = []
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  [params.comments]
+    enabled = false
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    name = "分类"
+    url = "/categories/"
+    weight = 30
+  [[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 40
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 50
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "monokai"
